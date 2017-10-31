@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#42A5F5</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="backgroundApp">#FFFFFF</color>
+    <color name="backgrounPrivate">#42A5F5</color>
+    <color name="textColor">#2196F3</color>
+    <color name="text">#424242</color>
+    <color name="texthit">#424242</color>
+    <color name="textButton">#FFFFFF</color>
+
+
+
+
+
+
+</resources>
