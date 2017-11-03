@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kku.toolmee.bootcbatong.emsvolunteer.fragment_fristaid2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="8dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+               />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

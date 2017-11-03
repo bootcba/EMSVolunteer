@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kku.toolmee.bootcbatong.emsvolunteer.fragment_manuBoby"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_select"
+            android:text="กรุณาเลือกจุดที่ได้รับเจ็บ"
+            android:textColor="@color/text"
+            android:textSize="16dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <LinearLayout
+                android:layout_width="150dp"
+                 android:layout_height="175dp"
+                 android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+
+
+                android:padding="16dp"
+                app:srcCompat="@drawable/brain"
+                android:background="@drawable/background_fistaid"
+                />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="สมอง"
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="175dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                >
+
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center_horizontal"
+
+
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/head"
+                    android:background="@drawable/background_fistaid"
+                    />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="ศีรษะ"
+                    android:textColor="@color/textColor"
+                    android:textSize="20dp" />
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="175dp"
+                android:layout_gravity="center_horizontal"
+
+
+                android:padding="16dp"
+                app:srcCompat="@drawable/boby"
+                android:background="@drawable/background_fistaid2"
+                />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="บริเณร่างกาย"
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
