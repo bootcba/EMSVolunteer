@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_page"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="kku.toolmee.bootcbatong.emsvolunteer.fragment_manuBoby"
+    tools:context="kku.toolmee.bootcbatong.emsvolunteer.fragment_manuFristAid"
     >
 
     <LinearLayout
@@ -36,23 +37,23 @@
             >
             <LinearLayout
                 android:layout_width="150dp"
-                 android:layout_height="175dp"
+                 android:layout_height="150dp"
                  android:orientation="vertical"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/background_fistaid"
 
             >
 
 
-            <ImageView
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_gravity="center_horizontal"
-
-
-                android:padding="16dp"
-                app:srcCompat="@drawable/brain"
-                android:background="@drawable/background_fistaid"
-                />
+                <ImageButton
+                    android:id="@+id/manu_brain"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/brain"
+                    android:padding="16dp"
+                     />
 
             <TextView
                 android:id="@+id/textView1"
@@ -61,7 +62,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="สมอง"
                 android:textColor="@color/textColor"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
 
 
@@ -70,22 +71,25 @@
 
             <LinearLayout
                 android:layout_width="150dp"
-                android:layout_height="175dp"
+                android:layout_height="150dp"
                 android:orientation="vertical"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/background_fistaid"
+
                 >
 
 
-                <ImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                <ImageButton
+                    android:id="@+id/manu_head"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/head"
 
-
-                    android:padding="16dp"
-                    app:srcCompat="@drawable/head"
-                    android:background="@drawable/background_fistaid"
                     />
+
+
 
                 <TextView
                     android:id="@+id/textView2"
@@ -94,7 +98,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="ศีรษะ"
                     android:textColor="@color/textColor"
-                    android:textSize="20dp" />
+                    android:textSize="16dp" />
 
 
 
@@ -103,24 +107,23 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:orientation="vertical"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:background="@drawable/background_fistaid2"
 
             >
 
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="175dp"
+            <ImageButton
+                android:id="@+id/manu_boby"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-
-
-                android:padding="16dp"
-                app:srcCompat="@drawable/boby"
-                android:background="@drawable/background_fistaid2"
+               android:layout_marginTop="10dp"
+                android:background="@drawable/boby"
                 />
 
             <TextView
@@ -130,7 +133,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="บริเณร่างกาย"
                 android:textColor="@color/textColor"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
 
 

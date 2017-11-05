@@ -10,10 +10,19 @@
     <string name="tab_text_4">หอบหืด</string>
     <string name="tab_text_5">ชัก</string>
 
+
+    <string name="boby_text1">แผลฉีกขาด</string>
+    <string name="boby_text2">แผลจากน้ำร้อนลวก</string>
+    <string name="boby_text3">วัตถุหักคา</string>
+    <string name="boby_text4">ตกจากที่สูง</string>
+    <string name="boby_text5">อวัยวะถูกตัดขาด</string>
+    <string name="boby_text6">แผบจากสารเคมี</string>
+    <string name="boby_text7">เลือดตกใน</string>
+    <string name="boby_text8">กระดูกหัก</string>
+
+
     <string name="appName">EMS Volunteer</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- <string name="logout"> <u>ออกจากระบบ</u>
     </string> -->

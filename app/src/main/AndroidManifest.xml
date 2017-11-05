@@ -29,6 +29,9 @@
             android:name=".fristAid"
             android:label="@string/title_activity_frist_aid"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".fristAid_manuBoby" />
+        <activity android:name=".fristAid_brain" />
+        <activity android:name=".fristAid_head"></activity>
     </application>
 
 </manifest>
