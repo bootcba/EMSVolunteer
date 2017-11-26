@@ -17,7 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="1dp"
+        android:layout_marginLeft="3dp"
         android:layout_marginTop="2dp"
         android:orientation="vertical"
         >
@@ -34,9 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:orientation="vertical"
-
                 android:textSize="25dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                 android:textColor="@color/text"
                 android:text="ระยะทาง : " />
             <TextView
                 android:id="@+id/textDistance"
@@ -44,10 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:orientation="vertical"
-
                 android:textSize="25dp"
                 android:layout_marginLeft="1dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textColor="@color/text" />
 
         </LinearLayout>
         <LinearLayout
@@ -64,6 +62,7 @@
                 android:orientation="vertical"
                 android:text="เวลา : "
                 android:textSize="20dp"
+                android:textColor="@color/text"
                  />
             <TextView
                 android:id="@+id/textTime"
@@ -71,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:orientation="vertical"
-
+                android:textColor="@color/text"
                 android:textSize="20dp"
                 android:layout_marginLeft="1dp"
                 />
@@ -82,6 +81,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:textColor="@color/text"
+                android:textSize="20dp"
+                android:layout_marginLeft="1dp"
+                android:text="สถานที่"
+                />
 
 
             <TextView
@@ -90,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:orientation="vertical"
-
+                android:textColor="@color/text"
                 android:textSize="20dp"
                 android:layout_marginLeft="1dp"
                 />
@@ -110,6 +120,7 @@
                 android:orientation="vertical"
                 android:text="อฉช : "
                 android:textSize="20dp"
+                android:textColor="@color/text"
                 />
             <TextView
                 android:id="@+id/textName"
@@ -117,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:orientation="vertical"
-
+                android:textColor="@color/text"
                 android:textSize="20dp"
                 android:layout_marginLeft="1dp"
                 />

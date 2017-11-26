@@ -31,7 +31,18 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".fristAid_manuBoby" />
         <activity android:name=".fristAid_brain" />
-        <activity android:name=".fristAid_head"></activity>
+        <activity android:name=".fristAid_head" />
+        <activity android:name=".CPR" />
+        <activity android:name=".detail_alertEmergency" />
+        <activity android:name=".fristAid_boby_torn" />
+        <activity android:name=".fristAid_boby_scald" />
+        <activity android:name=".fristAid_boby_stab" />
+        <activity android:name=".fristAid_boby_fail" />
+        <activity android:name=".fristAid_boby_organ" />
+        <activity android:name=".fristAid_boby_chemical" />
+        <activity android:name=".fristAid_boby_blood" />
+        <activity android:name=".fristAid_boby_bone" />
+        <activity android:name=".show_profileSufferer"></activity>
     </application>
 
 </manifest>

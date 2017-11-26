@@ -4,7 +4,7 @@
 
     <stroke
         android:width="2dp"
-        android:color="#F5F5F5" />
+        android:color="@color/backgrounPage" />
     <corners
         android:radius="5dp"/>
     <padding
@@ -13,5 +13,5 @@
         android:left="2dp"
         android:right="2dp"
         />
-    <solid android:color="#F5F5F5"/>
+    <solid android:color="@color/backgrounPage"/>
 </shape>

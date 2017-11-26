@@ -1,5 +1,7 @@
 package kku.toolmee.bootcbatong.emsvolunteer;
 
+import android.media.MediaPlayer;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,7 +11,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class fristAid extends AppCompatActivity {
 
@@ -47,6 +51,19 @@ public class fristAid extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+      /*  TabItem tabItem2 = (TabItem)findViewById(R.id.tabItem2);
+        final MediaPlayer player_cpr = MediaPlayer.create( fristAid.this, R.raw.cpr);
+        tabItem2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player_cpr.setLooping(true);
+                player_cpr.start();
+            }
+        });*/
+
+
+
+
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
@@ -61,7 +78,7 @@ public class fristAid extends AppCompatActivity {
 
 
      //setting on bar
-  /* @Override
+  /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_frist_aid, menu);
@@ -86,12 +103,12 @@ public class fristAid extends AppCompatActivity {
     //Add back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        TabItem tabItem1;
         int id = item.getItemId();
 
         if (id == android.R.id.home){
             this.finish();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -110,6 +127,7 @@ public class fristAid extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
+
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 
@@ -119,9 +137,9 @@ public class fristAid extends AppCompatActivity {
                 case 1:
                     return new fragment_fristaid1();
                 case 2:
-                    return new fragment_fristaid2();
+                  return new fragment_fristaid2();
                 case 3:
-                    return new fragment_fristaid3();
+                   return new fragment_fristaid3();
                 case 4:
                     return new fragment_fristaid4();
 

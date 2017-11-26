@@ -1,6 +1,8 @@
 package kku.toolmee.bootcbatong.emsvolunteer;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -53,8 +55,27 @@ public class menuVolunteer extends AppCompatActivity {
         imageButton_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),login.class);
-                startActivity(intent);
+                AlertDialog.Builder spBuilder = new AlertDialog.Builder(menuVolunteer.this);
+                spBuilder.setIcon(R.drawable.ic_checked);
+                spBuilder.setTitle("คุณต้องการออกจากระบบหรือไม่ ?");
+                //spBuilder.setMessage("");
+                spBuilder.setCancelable(false); //ทำใต้ห้มันคลิกออกไม่ได้
+
+                spBuilder.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(),login.class);
+                        startActivity(intent);
+                    }
+                });
+               spBuilder.setNeutralButton("ยกเเลิก", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = spBuilder.create();
+                alertDialog.show();
             }
         });
 

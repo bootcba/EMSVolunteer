@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class profileVolunteer extends AppCompatActivity {
 
@@ -16,10 +17,9 @@ public class profileVolunteer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_volunteer);
-
         //ช้อความบน toolbar
-
         getSupportActionBar().setTitle("ข้อมูลส่วนตัวของ อฉช.");
+
 
         //ผูก
         button_toSetPassword = (Button) findViewById(R.id.toSetPassword);
@@ -30,6 +30,8 @@ public class profileVolunteer extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),setPassword.class);
                 startActivity(intent);
+                //toast
+                Toast.makeText(profileVolunteer.this, "บันทึกข้อมูลเรียบร้อยแล้ว", Toast.LENGTH_LONG).show();
             }
         });
 

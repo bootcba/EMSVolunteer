@@ -51,37 +51,26 @@ public class fragment_manuFristAid extends Fragment {
         imageButton_brain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),fristAid_brain.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),fristAid_brain.class);
                 startActivity(intent);
             }
         });
         imageButton_head.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),fristAid_head.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),fristAid_head.class);
                 startActivity(intent);
             }
         });
         imageButton_boby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),fristAid_manuBoby.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),fristAid_manuBoby.class);
                 startActivity(intent);
             }
         });
-
-
-
-
-
     }
-
-
-
-
-
-
-        }
+}
 
 
 

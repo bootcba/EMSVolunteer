@@ -51,9 +51,10 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <ImageButton
+                android:id="@+id/toProfileSufferer"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/check"
+                android:background="@drawable/toprofile"
 
                 />
 
