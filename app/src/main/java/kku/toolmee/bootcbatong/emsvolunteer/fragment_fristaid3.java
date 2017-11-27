@@ -30,8 +30,8 @@ public class fragment_fristaid3 extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_fristaid3, container, false);
       //  return inflater.inflate(R.layout.fragment_fristaid3, container, false);
-        mediaPlayer = MediaPlayer.create(getContext(),R.raw.sathar);
-        mediaPlayer.start();
+      /*  mediaPlayer = MediaPlayer.create(getContext(),R.raw.sathar);
+        mediaPlayer.start();*/
 
         return rootView;
     }

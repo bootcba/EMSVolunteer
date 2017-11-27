@@ -28,9 +28,8 @@ private MediaPlayer mediaPlayer;
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_fristaid4, container, false);
        // return inflater.inflate(R.layout.fragment_fristaid4, container, false);
-      mediaPlayer = MediaPlayer.create(getActivity(),R.raw.whip);
-        mediaPlayer.start();
-
+       /* mediaPlayer = MediaPlayer.create(getActivity(),R.raw.whip);
+        mediaPlayer.start();*/
         return rootView;
     }
 

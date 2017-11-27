@@ -35,8 +35,8 @@ public class fragment_fristaid2 extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_fristaid2, container, false);
         //ปุ่ม to CPR
         //ผูก
-        mediaPlayer = MediaPlayer.create(getContext(),R.raw.aed);
-        mediaPlayer.start();
+    /*   mediaPlayer = MediaPlayer.create(getContext(),R.raw.aed);
+        mediaPlayer.start();*/
         btnAEDToCPR = (Button) rootView.findViewById(R.id.btnAEDToCPR);
 
         //เปลี่ยนหน้า

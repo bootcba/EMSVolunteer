@@ -43,21 +43,15 @@ public class fragment_fristaid1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       //  return inflater.inflate(R.layout.fragment_fristaid1, container, false);
+
         View rootView = inflater.inflate(R.layout.fragment_fristaid1, container, false);
 
-        //ปุ่ม to CPR
-        //ผูก
-          //  imCPR = (ImageView) rootView.findViewById(R.id.imCpr) ;
+        mediaPlayer = MediaPlayer.create(getContext(),R.raw.bone);
+        mediaPlayer.start();
 
-      /* mediaPlayer = MediaPlayer.create(getContext(),R.raw.bone);
-        mediaPlayer.start();*/
-
-            btnToCPR = (Button) rootView.findViewById(R.id.btnToCPR);
-
-            //เปลี่ยนหน้า
-            btnToCPR.setOnClickListener(new View.OnClickListener() {
-                @Override
+        btnToCPR = (Button) rootView.findViewById(R.id.btnToCPR);
+        btnToCPR.setOnClickListener(new View.OnClickListener() {
+        @Override
                 public void onClick(View v) {
 
 
