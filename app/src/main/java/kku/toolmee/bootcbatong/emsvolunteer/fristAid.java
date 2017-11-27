@@ -1,6 +1,8 @@
 package kku.toolmee.bootcbatong.emsvolunteer;
 
+import android.content.Context;
 import android.media.MediaPlayer;
+import android.os.Vibrator;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,9 +15,12 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TabHost;
 
-public class fristAid extends AppCompatActivity {
+public class fristAid extends AppCompatActivity /*implements TabLayout.OnTabSelectedListener */{
+    MediaPlayer mediaPlayer;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -31,12 +36,13 @@ public class fristAid extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+  //   private MediaPlayer mediaPlayer=null,mediaPlayer1 = null,mediaPlayer2=null,mediaPlayer3=null,mediaPlayer4=null ;
+   //  private TabItem tabItem1,tabItem2,tabItem3,tabItem4,tabItem5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fristaid);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,19 +57,6 @@ public class fristAid extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
-      /*  TabItem tabItem2 = (TabItem)findViewById(R.id.tabItem2);
-        final MediaPlayer player_cpr = MediaPlayer.create( fristAid.this, R.raw.cpr);
-        tabItem2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player_cpr.setLooping(true);
-                player_cpr.start();
-            }
-        });*/
-
-
-
-
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
@@ -71,77 +64,52 @@ public class fristAid extends AppCompatActivity {
         //Add back button
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
-
-
-
-
-
-     //setting on bar
-  /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_frist_aid, menu);
-        return true;
-    }*/
-
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-
     //Add back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         TabItem tabItem1;
         int id = item.getItemId();
-
         if (id == android.R.id.home){
             this.finish();
         }
+
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
         @Override
         public Fragment getItem(int position) {
-
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-
             switch (position){
                 case 0 :
-                    return new fragment_manuFristAid();
+                    fragment_manuFristAid tap0 = new fragment_manuFristAid();
+                return tap0;
                 case 1:
-                    return new fragment_fristaid1();
+                    fragment_fristaid1 tap1 = new fragment_fristaid1();
+                    return tap1;
+
                 case 2:
-                  return new fragment_fristaid2();
+                    fragment_fristaid2 tap2 = new fragment_fristaid2();
+
+                    return  tap2;
                 case 3:
-                   return new fragment_fristaid3();
+                    fragment_fristaid3 tap3 = new fragment_fristaid3();
+                    return tap3;
+
                 case 4:
-                    return new fragment_fristaid4();
+                    fragment_fristaid4 tap4 = new fragment_fristaid4();
+                    return tap4;
+
 
             }
             return null;
@@ -150,7 +118,9 @@ public class fristAid extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 5 total pages.
-            return 5;
+            return 4;
         }
     }
+
+
 }

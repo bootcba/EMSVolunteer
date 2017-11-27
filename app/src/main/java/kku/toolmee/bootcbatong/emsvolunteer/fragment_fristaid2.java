@@ -2,8 +2,10 @@ package kku.toolmee.bootcbatong.emsvolunteer;
 
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabItem;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,9 @@ import android.widget.ImageView;
  */
 public class fragment_fristaid2 extends Fragment {
     private Button btnAEDToCPR;
+    private MediaPlayer mediaPlayer;
+    private TabItem tabItem1;
+
 
 
     public fragment_fristaid2() {
@@ -27,11 +32,12 @@ public class fragment_fristaid2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView1 = inflater.inflate(R.layout.fragment_fristaid2, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_fristaid2, container, false);
         //ปุ่ม to CPR
         //ผูก
-
-        btnAEDToCPR = (Button) rootView1.findViewById(R.id.btnAEDToCPR);
+        mediaPlayer = MediaPlayer.create(getContext(),R.raw.aed);
+        mediaPlayer.start();
+        btnAEDToCPR = (Button) rootView.findViewById(R.id.btnAEDToCPR);
 
         //เปลี่ยนหน้า
         btnAEDToCPR.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +46,7 @@ public class fragment_fristaid2 extends Fragment {
                Intent intent = new Intent(getActivity().getApplicationContext(), CPR.class);
                startActivity(intent);
                 //stop sound
-                // mediaPlayer_cpr.stop();
+                 mediaPlayer.stop();
 
 
 
@@ -50,7 +56,7 @@ public class fragment_fristaid2 extends Fragment {
         });
 
 
-        return rootView1;
+        return rootView;
 
     }
 }

@@ -8,8 +8,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabItem;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -24,6 +26,8 @@ public class fragment_fristaid1 extends Fragment {
    private FloatingActionButton button_FabToCPR;
    private Button btnToCPR;
    private ImageView imCPR;
+   private MediaPlayer mediaPlayer;
+   private TabItem tabItem0;
 
    public static fragment_fristaid1 newInstance()  {
         return new fragment_fristaid1();
@@ -41,34 +45,35 @@ public class fragment_fristaid1 extends Fragment {
         // Inflate the layout for this fragment
        //  return inflater.inflate(R.layout.fragment_fristaid1, container, false);
         View rootView = inflater.inflate(R.layout.fragment_fristaid1, container, false);
+
         //ปุ่ม to CPR
         //ผูก
           //  imCPR = (ImageView) rootView.findViewById(R.id.imCpr) ;
-           btnToCPR = (Button) rootView.findViewById(R.id.btnToCPR);
+
+      /* mediaPlayer = MediaPlayer.create(getContext(),R.raw.bone);
+        mediaPlayer.start();*/
+
+            btnToCPR = (Button) rootView.findViewById(R.id.btnToCPR);
 
             //เปลี่ยนหน้า
             btnToCPR.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+
                     Intent intent = new Intent(getActivity().getApplicationContext(),CPR.class);
                     startActivity(intent);
-                    //stop sound
-                   // mediaPlayer_cpr.stop();
-
-
-
+                   mediaPlayer.stop();
                 }
-
             });
-
 
         return rootView;
     }
+
     @Override
     public void onActivityCreated (Bundle saveInstanceState){
        super.onActivityCreated(saveInstanceState);
     }
-
 
 
 }

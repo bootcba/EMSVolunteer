@@ -1,7 +1,9 @@
 package kku.toolmee.bootcbatong.emsvolunteer;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.design.widget.TabItem;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +15,8 @@ import android.view.ViewGroup;
  */
 public class fragment_fristaid4 extends Fragment {
 
-
+private MediaPlayer mediaPlayer;
+    private TabItem tabItem4;
     public fragment_fristaid4() {
         // Required empty public constructor
     }
@@ -23,7 +26,12 @@ public class fragment_fristaid4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fristaid4, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_fristaid4, container, false);
+       // return inflater.inflate(R.layout.fragment_fristaid4, container, false);
+      mediaPlayer = MediaPlayer.create(getActivity(),R.raw.whip);
+        mediaPlayer.start();
+
+        return rootView;
     }
 
 }
