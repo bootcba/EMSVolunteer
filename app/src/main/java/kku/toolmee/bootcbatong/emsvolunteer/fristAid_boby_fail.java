@@ -1,10 +1,12 @@
 package kku.toolmee.bootcbatong.emsvolunteer;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 public class fristAid_boby_fail extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,9 @@ public class fristAid_boby_fail extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mediaPlayer = MediaPlayer.create(this,R.raw.fail);
+        mediaPlayer.start();
+
     }
     //Add back button
     @Override
@@ -25,8 +30,10 @@ public class fristAid_boby_fail extends AppCompatActivity {
 
         if (id == android.R.id.home){
             this.finish();
+            mediaPlayer.stop();
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }
